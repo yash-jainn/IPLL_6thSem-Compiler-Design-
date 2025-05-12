@@ -1,0 +1,6 @@
+Here is the terminal command to run the code:-
+
+ nasm -f elf32 -o file_name.o file_name.asm
+ ld -m elf_i386 -o file_name file_name.o
+./file_name
+

@@ -1,0 +1,170 @@
+
+QUAD ARRAY REPRESENTATION:
+************************************************************************************************************************
+Index   op          arg1        arg2        result      
+----------------------------------------------------------------------------------------------------
+0       Label                               main        
+1       =           0                       t0          
+2       =           t0                      i           
+3       =           0                       t1          
+4       =           t1                      i           
+5       =           10                      t3          
+6       <           i           t3          12          
+7       goto                                19          
+8       =           1                       t4          
+9       +           i           t4          t5          
+10      =           t5                      i           
+11      goto                                5           
+12      *           i           4           t7          
+13      *           i           i           t8          
+14      []=         t7          t8          arr         
+15      =           1                       t10         
+16      +           i           t10         t11         
+17      =           t11                     i           
+18      goto                                8           
+19      =           5                       t13         
+20      *           t13         4           t14         
+21      =&          arr                     t15         
+22      =           t15                     p           
+23      =*          p                       t17         
+24      =           t17                     val         
+25      =           10                      t18         
+26      +           val         t18         t19         
+27      *=          t19                     p           
+28      =           3                       t20         
+29      =           t20                     j           
+30      =           1                       t21         
+31      +           j           t21         t22         
+32      *           t22         4           t23         
+33      =[]         arr         t23         t24         
+34      =           1                       t25         
+35      -           j           t25         t26         
+36      *           t26         4           t27         
+37      =[]         arr         t27         t28         
+38      -           t24         t28         t29         
+39      =           t29                     k           
+
+THREE ADDRESS CODE : 
+************************************************************************************************************************
+void main()
+{
+    void main;
+    int t0;
+    int t1;
+    int t3;
+    int t4;
+    int t5;
+    int t7;
+    int t8;
+    int t10;
+    int t11;
+    int t13;
+    int t14;
+    int t15;
+    int t17;
+    int t18;
+    int t19;
+    int t20;
+    int t21;
+    int t22;
+    int t23;
+    int t24;
+    int t25;
+    int t26;
+    int t27;
+    int t28;
+    int t29;
+
+L0:     main: 
+L1:     t0 = 0;
+L2:     i = t0;
+L3:     t1 = 0;
+L4:     i = t1;
+L5:     t3 = 10;
+L6:     if (i < t3) goto L12;
+L7:     goto L19;
+L8:     t4 = 1;
+L9:     t5 = i + t4;
+L10:     i = t5;
+L11:     goto L5;
+L12:     t7 = i * 4;
+L13:     t8 = i * i;
+L14:     arr[t7] = t8;
+L15:     t10 = 1;
+L16:     t11 = i + t10;
+L17:     i = t11;
+L18:     goto L8;
+L19:     t13 = 5;
+L20:     t14 = t13 * 4;
+L21:     t15 = &arr;
+L22:     p = t15;
+L23:     t17 = *p;
+L24:     val = t17;
+L25:     t18 = 10;
+L26:     t19 = val + t18;
+L27:     *p = t19;
+L28:     t20 = 3;
+L29:     j = t20;
+L30:     t21 = 1;
+L31:     t22 = j + t21;
+L32:     t23 = t22 * 4;
+L33:     t24 = arr[t23];
+L34:     t25 = 1;
+L35:     t26 = j - t25;
+L36:     t27 = t26 * 4;
+L37:     t28 = arr[t27];
+L38:     t29 = t24 - t28;
+L39:     k = t29;
+}
+**********************************************************************************************************************************
+************************************************************************************************************************
+Name: Global                                                Parent Table: NULL
+________________________________________________________________________________________________________________________
+Name                                    Type                Init Value       Size           Offset         Nested
+                                                                                                    
+main                                    void                -                   0              0              main
+------------------------------------------------------------------------------------------------------------------------
+
+************************************************************************************************************************
+Name: main                                                  Parent Table: Global
+________________________________________________________________________________________________________________________
+Name                                    Type                Init Value       Size           Offset         Nested
+                                                                                                    
+arr                                     arr(10,integer)     -                   40             0              NULL
+i                                       integer             0                   4              40             NULL
+t0                                      integer             0                   4              44             NULL
+p                                       ptr(integer)        -                   4              48             NULL
+t1                                      integer             0                   4              52             NULL
+t2                                      integer                                 4              56             NULL
+t3                                      integer             10                  4              60             NULL
+t4                                      integer             1                   4              64             NULL
+t5                                      integer                                 4              68             NULL
+t6                                      integer                                 4              72             NULL
+t7                                      integer                                 4              76             NULL
+t8                                      integer                                 4              80             NULL
+t9                                      integer                                 4              84             NULL
+t10                                     integer             1                   4              88             NULL
+t11                                     integer                                 4              92             NULL
+t12                                     integer                                 4              96             NULL
+t13                                     integer             5                   4              100            NULL
+t14                                     integer                                 4              104            NULL
+t15                                     ptr(arr(10,integer))                    4              108            NULL
+t16                                     ptr(null)                               4              112            NULL
+val                                     integer             -                   4              116            NULL
+t17                                     integer                                 4              120            NULL
+t18                                     integer             10                  4              124            NULL
+t19                                     integer                                 4              128            NULL
+j                                       integer             3                   4              132            NULL
+t20                                     integer             3                   4              136            NULL
+k                                       integer             -                   4              140            NULL
+t21                                     integer             1                   4              144            NULL
+t22                                     integer                                 4              148            NULL
+t23                                     integer                                 4              152            NULL
+t24                                     integer                                 4              156            NULL
+t25                                     integer             1                   4              160            NULL
+t26                                     integer                                 4              164            NULL
+t27                                     integer                                 4              168            NULL
+t28                                     integer                                 4              172            NULL
+t29                                     integer                                 4              176            NULL
+------------------------------------------------------------------------------------------------------------------------
+

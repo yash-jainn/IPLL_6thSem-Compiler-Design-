@@ -1,0 +1,14 @@
+Name: printInt, Type: Identifier
+Name: printStr, Type: Identifier
+Name: r, Type: Identifier
+Name: 10, Type: Integer Constant, Value: 
+Name: main, Type: Identifier
+Name: -2, Type: Integer Constant, Value: 
+Name: -1, Type: Integer Constant, Value: 
+Name: 1, Type: Integer Constant, Value: 
+Name: 0, Type: Integer Constant, Value: 
+Name: 2, Type: Integer Constant, Value: 
+Name: n, Type: Identifier
+Name: fibonacci, Type: Identifier
+Name: f_even, Type: Identifier
+Name: f_odd, Type: Identifier
